@@ -2,9 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>Inicio Sesión</title>
+        <title>Registrar</title>
     </head>
     <body>
-        
+        <h1>Registro</h1>
+        <form name = "Registro"
+        action = "procesarForm.do"
+        method = "post">
+            Nombre y Apellidos:<br>
+            <input type="text" name="Nombre y Apellidos"/>
+            Nombre Usuario:<br>
+            <input type="text" name="Nombre Usuario"/>
+            Correo:<br>
+            <input type="text" name="Correo"/>
+            Contraseña:<br>
+            <input type="password" name="Contraseña"/>
+            Confirmar Contraseña:<br>
+            <input type="password" name="Confirmar Contraseña"/>
+            <input type="submit" value = "send"/>
+        </form>
     </body>
 </html>
