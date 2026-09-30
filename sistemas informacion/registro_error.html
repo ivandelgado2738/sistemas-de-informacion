@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Registrar (Error)</title>
+</head>
+<body>
+    <h1>Registro</h1>
+
+    <!-- MENSAJE DE ERROR EN ROJO -->
+    <p style="color : red;">
+         Error: Campos inválidos o datos incompletos,Revisa el formulario.
+    </p>
+
+    <form name="Registro" method="post">
+        <p>
+            Nombre Usuario:<br>
+            <input type="text" name="Nombre Usuario"/>
+        </p>
+
+        <p>
+            Correo:<br>
+            <input type="text" name="Correo"/>
+        </p>
+
+        <p>
+            Contraseña:<br>
+            <input type="password" name="Contraseña"/>
+        </p>
+
+        <p>
+            Confirmar Contraseña:<br>
+            <input type="password" name="Confirmar Contraseña"/>
+        </p>
+
+        <p>
+            <a href="registro_exito.html">
+                <button type="button">Reintentar (Éxito)</button>
+            </a>
+            <a href="registro_error.html">
+                <button type="button">Reintentar (Error)</button>
+            </a>
+        </p>
+    </form>
+</body>
+</html>
