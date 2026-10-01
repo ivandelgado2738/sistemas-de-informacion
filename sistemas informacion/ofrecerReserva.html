@@ -1,52 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<title>Ofrecer Reserva</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofrecer Reserva</title>
 </head>
 <body>
+  <h1>Ofrecer reserva de pistas</h1>
 
-    <h1>Ofrecer Reserva de Pista</h1>
+  <p>Datos sobre la pista</p>
 
-    <p>Completa los datos para publicar un nuevo horario disponible para que los clientes puedan reservarlo.</p>
+  <form>
+    <p>
+      <label for="pista">Pista:</label><br>
+      <select id="pista" name = "pista" required>
+        <option value=""> --seleccione una pista-- </option>
+        <option value = "pista1"> pista 1</option>
+        <option value = "pista2"> pista 2</option>
+        <option value = "pista3"> pista 3</option>
+      </select>
+    </p>
 
-    <form>
-        <p>
-            <label for="pista">Pista:</label><br>
-            <select id="pista" name="pista" required>
-                <option value="">-- Selecciona una pista --</option>
-                <option value="pista1">Pista 1 - Pádel</option>
-                <option value="pista2">Pista 2 - Pádel</option>
-                <option value="pista3">Pista 3 - Tenis</option>
-            </select>
-        </p>
+    <p>
+      <label for="fecha"> Fecha: </label><br> 
+      <input type = "date" id = "fecha" name = "fecha" required>
+    </p>
 
-        <p>
-            <label for="fecha">Fecha:</label><br>
-            <input type="date" id="fecha" name="fecha" required>
-        </p>
+    <p>
+      <label for="horaInicio"> Hora Inicio</label><br>
+      <input type = "time" id = "horaInicio" name = "horaInicio" required> 
+    </p>
 
-        <p>
-            <label for="horaInicio">Hora de inicio:</label><br>
-            <input type="time" id="horaInicio" name="horaInicio" required>
-        </p>
+    <p>
+      <label for="horaFin"> Hora Fin</label><br>
+      <input type = "time" id = "horaFin" name = "horaFin" required> 
+    </p>
 
-        <p>
-            <label for="horaFin">Hora de finalización:</label><br>
-            <input type="time" id="horaFin" name="horaFin" required>
-        </p>
-
-        <p>
-            <label for="maxJugadores">Número máximo de jugadores:</label><br>
-            <input type="number" id="maxJugadores" name="maxJugadores" min="2" max="4" value="4" required>
-        </p>
-
-        <p>
-            <button type="submit">Publicar Reserva</button>
-            <a href="verReservas.html">
-                <button type="button">Cancelar</button>
-            </a>
-        </p>
-    </form>
-
+    <p>
+      <button type = "submit">Publicar Reserva</button>
+      <a href = "verReservas.html">
+        <button type = "button"> Cancelar </button>
+      </a>
+    </p>
+  </form>
+    
 </body>
 </html>
