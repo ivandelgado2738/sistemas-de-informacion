@@ -1,76 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<title>Ver Reservas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerReservas</title>
 </head>
 <body>
+    <h1> Reservas de pistas</h1>
 
-    <h1>Reservas de Pistas</h1>
-
-    <p>Listado de las reservas ofertadas y realizadas por los clientes.</p>
+    <p> Listado de pistas con sus reservas</p>
 
     <p>
-        <a href="ofrecerReserva.html">
-            <button type="button">+ Ofrecer Nueva Reserva</button>
-        </a>
+      <a href = "ofrecerReserva.html">
+        <button type = "button"> Ofrecer Reserva </button>
+      </a>
     </p>
 
-    <table border="1" cellpadding="8" cellspacing="0">
-        <tr>
-            <th>Pista</th>
-            <th>Fecha</th>
-            <th>Horario</th>
-            <th>Jugadores</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-        </tr>
-        <tr>
-            <td>Pista 1 - Pádel</td>
-            <td>15/10/2026</td>
-            <td>18:00 - 19:30</td>
-            <td>4 / 4</td>
-            <td>Reservada</td>
-            <td>
-                <a href="detallePartido.html">Ver detalle</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Pista 2 - Pádel</td>
-            <td>15/10/2026</td>
-            <td>20:00 - 21:30</td>
-            <td>2 / 4</td>
-            <td>Reservada</td>
-            <td>
-                <a href="detallePartido.html">Ver detalle</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Pista 3 - Tenis</td>
-            <td>16/10/2026</td>
-            <td>09:00 - 10:30</td>
-            <td>0 / 2</td>
-            <td>Disponible (sin reservar)</td>
-            <td>
-                <a href="#">Cancelar oferta</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Pista 1 - Pádel</td>
-            <td>17/10/2026</td>
-            <td>17:00 - 18:30</td>
-            <td>0 / 4</td>
-            <td>Disponible (sin reservar)</td>
-            <td>
-                <a href="#">Cancelar oferta</a>
-            </td>
+    <table>
+      <tr>
+        <th>Pista</th>
+        <th>Fecha</th>
+        <th>Horario</th>
+        <th>Jugadores</th>
+        <th>Estado</th>
+        <th>Cancelar</th>
+      </tr>
+
+      <tr>
+        <td>Pista 2</td>
+        <td>15/10/2026</td>
+        <td>20:00 - 21:30</td>
+        <td>2 / 4</td>
+        <td>Reservada</td>
+        <td>
+          <a href = "cancelar_error.html">
+            <button type = "button">Cancelar</button>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Pista 3</td>
+        <td>16/10/2026</td>
+        <td>09:00 - 10:30</td>
+        <td>0 / 2</td>
+        <td>sin reservar</td>
+        <td>
+          <a href = "cancelar_exito.html">
+            <button type = "button">Cancelar</button>
+          </a>
+        </td>
         </tr>
     </table>
-
-    <p>
-        <a href="principal.html">
-            <button type="button">Volver al inicio</button>
-        </a>
-    </p>
-
+    
 </body>
 </html>
