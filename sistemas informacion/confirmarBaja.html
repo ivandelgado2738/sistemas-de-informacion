@@ -2,31 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos-login.css">
     <title>Confirmar Baja</title>
 </head>
 <body>
-
-    <h1>Confirmar Baja de Cuenta</h1>
-
-    <p>¿Estás seguro de que quieres dar de baja tu cuenta?</p>
-
-    <form>
-        <p>
-            <label for="password">Introduce tu contraseña para confirmar:</label><br>
-            <input type="password" id="password" name="password" required>
-        </p>
-
-        <p>
-        <button type="submit">Confirmar y Dar de Baja</button>
-        </p>
-        
-        <p>
-        <a href="perfil.html">
-            <button type="button">Cancelar</button>
-        </a>
-        </p>
-    </form>
-
+<div class="contenedor-login">
+            <h2>Confirmar Baja</h2>
+            <form name= "baja"
+            action="procesarFrom.do"
+            method="get">
+                <div class="input-group">
+                    <label for="username">Esta seguro que quiere darse de baja</label>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Introduce tu contraseña para confirmar" required>
+                </div>
+                <button type="submit" class="btn-login">Confirmar</button>
+                </p>
+            </form>
+        </div>
 </body>
 </html>

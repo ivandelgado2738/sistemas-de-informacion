@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Editar Usuario</title>
+    <link rel="stylesheet" href="estilos-login.css">
+    <title>Editar Usuario</title>
+    <meta charset="UTF-8"> 
 </head>
 <body>
 
-    <h1>Editar Usuario</h1>
-
-    <form>
-        <p>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" value="Marcos Lopez" required>
-        </p>
-
-        <p>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" value="marlon@unizar.es" required>
-        </p>
-
-        <p>
-            <label for="estado">Estado:</label><br>
-            <select id="estado" name="estado">
-                <option value="activo" selected>Activo</option>
-                <option value="inactivo">Inactivo</option>
-            </select>
-        </p>
-
-        <p>
-            <button type="submit">Guardar Cambios</button>
-            <a href="gestionUsuarios.html">
-                <button type="button">Cancelar</button>
-            </a>
-        </p>
-    </form>
+    <div class="contenedor-login">
+            <h2>Editar usuario</h2>
+            <form name= "Inicio Sesión"
+            action="procesarFrom.do"
+            method="get">
+                <div class="input-group">
+                    <label for="username">Nombre</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">email</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn-login">Guardar cambios</button>
+            </form>
+        </div>
 
 </body>
 </html>
