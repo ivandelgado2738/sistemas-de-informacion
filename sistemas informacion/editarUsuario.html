@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Editar Usuario</title>
+</head>
+<body>
+
+    <h1>Editar Usuario</h1>
+
+    <form>
+        <p>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" value="María López" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value="maria.lopez@email.com" required>
+        </p>
+
+        <p>
+            <label for="rol">Rol:</label><br>
+            <select id="rol" name="rol">
+                <option value="cliente" selected>Cliente</option>
+                <option value="trabajador">Trabajador</option>
+                <option value="administrador">Administrador</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="estado">Estado:</label><br>
+            <select id="estado" name="estado">
+                <option value="activo" selected>Activo</option>
+                <option value="inactivo">Inactivo</option>
+            </select>
+        </p>
+
+        <p>
+            <button type="submit">Guardar Cambios</button>
+            <a href="gestionUsuarios.html">
+                <button type="button">Cancelar</button>
+            </a>
+        </p>
+    </form>
+
+</body>
+</html>
