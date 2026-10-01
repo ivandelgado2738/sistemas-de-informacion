@@ -3,21 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva Cancelada</title>
+    <title>VerReservas</title>
 </head>
 <body>
+    <h1>Reservas de pistas</h1>
 
-    <h1>Reserva Cancelada</h1>
-
-    <p style="color: green;">
-        La reserva de la Pista 3 para el día 16/10/2026 ha sido cancelada correctamente.
-    </p>
+    <p>Listado de pistas con sus reservas</p>
 
     <p>
-        <a href="verReservas.html">
-            <button type="button">Volver al listado de reservas</button>
-        </a>
+      <a href="ofrecerReserva.html">
+        <button type="button">Ofrecer Reserva</button>
+      </a>
     </p>
 
+    <table>
+      <tr>
+        <th>Pista</th>
+        <th>Fecha</th>
+        <th>Horario</th>
+        <th>Jugadores</th>
+        <th>Estado</th>
+        <th>Pagos</th>
+        <th>Cancelar</th>
+      </tr>
+
+      <tr>
+        <td>Pista 1</td>
+        <td>15/10/2026</td>
+        <td>18:00 - 19:30</td>
+        <td>2 / 4</td>
+        <td>Reservada</td>
+        <td>
+          <a href="marcarPagos.html">
+            <button type="button">Ver Pagos</button>
+          </a>
+        </td>
+        <td>
+          <a href="cancelar_error.html">
+            <button type="button">Cancelar</button>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Pista 2</td>
+        <td>16/10/2026</td>
+        <td>09:00 - 10:30</td>
+        <td>0 / 2</td>
+        <td>Sin reservar</td>
+        <td>
+          <a href="marcarPagos.html">
+            <button type="button">Ver Pagos</button>
+          </a>
+        </td>
+        <td>
+          <a href="cancelar_exito.html">
+            <button type="button">Cancelar</button>
+          </a>
+        </td>
+      </tr>
+    </table>
+    
 </body>
 </html>
