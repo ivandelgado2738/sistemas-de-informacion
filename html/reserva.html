@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirnmar Reserva</title>
+    <link rel="stylesheet" href="estilos-reserva.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="checkout-card">
+            <div class="checkout-image-container">
+                <img src="PISTA-7-scaled.jpg" alt="Pista de Pádel" class="checkout-image">
+            </div>
+            <div class="checkout-content">
+                <h2>Confirmar Reserva</h2>
+                <div class="booking-info">
+                    <p><strong>Club:</strong> Setpoint Pádel Indoor</p>
+                    <p><strong>Pista:</strong> Pista 7 (Cristal)</p>
+                    <p><strong>Fecha:</strong> 15 de Octubre, 2026</p>
+                    <p><strong>Hora:</strong> 18:00 - 19:30 h</p>
+                    <p><strong>Precio:</strong> 24,00 €</p>
+                </div>
+                <form action="#" method="POST" class="booking-form">
+
+                    <div class="input-group">
+                        <label for="tipo-partido">Tipo de partido</label>
+                        <select id="tipo-partido" name="tipo_partido" required>
+                            <option value="invitacion">Por invitación (Privado)</option>
+                            <option value="abierto">Abierto (Cualquiera se puede unir)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-checkout">Reservar Pista</button>
+                    <a href="Main.html" class="btn-cancel">Cancelar</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

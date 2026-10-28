@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Pagos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos-admin.css">
+</head>
+<body>
+
+    <div class="panel-admin">
+        <a class="btn-volver" href="principalAdmin.html" style="margin-bottom:16px;">← Panel de administrador</a>
+        <h1>Pagos del Partido</h1>
+
+        <p><strong>Pista 1</strong></p>
+        <p>15/10/2026 — Horario: 18:00 - 19:30</p>
+
+        <table class="tabla-admin">
+            <tr>
+                <th>Jugador</th>
+                <th>Importe</th>
+                <th>Estado del Pago</th>
+                <th>Acción</th>
+            </tr>
+            <tr>
+                <td>María López</td>
+                <td>5,00 €</td>
+                <td><span class="estado estado-pagado">Pagado</span></td>
+                <td>
+                    <button type="button" class="btn-admin btn-admin-secundario">Marcar como no pagado</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Javier Ruiz</td>
+                <td>5,00 €</td>
+                <td><span class="estado estado-no-pagado">No Pagado</span></td>
+                <td>
+                    <button type="button" class="btn-admin">Marcar como pagado</button>
+                </td>
+            </tr>
+        </table>
+
+        <a class="btn-volver" href="verReservas.html">Volver a Reservas</a>
+    </div>
+
+</body>
+</html>

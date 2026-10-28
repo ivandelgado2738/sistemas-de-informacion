@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgis/postgis:17-3.4
+    container_name: padel_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: padel
+      POSTGRES_USER: padel
+      POSTGRES_PASSWORD: padel
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Los .sql de esta carpeta se ejecutan en orden alfabético
+      # (ddl.sql y luego seed.sql) SOLO la primera vez, con el volumen vacío
+      - ./sources/scripts:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:

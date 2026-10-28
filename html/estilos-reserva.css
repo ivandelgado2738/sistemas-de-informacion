@@ -1,0 +1,140 @@
+body {
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.checkout-container {
+    width: 100%;
+    max-width: 800px; /* Más ancho que el login para dar espacio a la imagen */
+}
+
+.checkout-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden; /* Recorta la imagen en las esquinas redondeadas */
+}
+
+.checkout-image-container {
+    flex: 1; /* Toma el 50% del ancho */
+    min-height: 100%;
+}
+
+.checkout-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    display: block;
+}
+
+.checkout-content {
+    flex: 1; /* Toma el otro 50% del ancho */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkout-content h2 {
+    color: #333333;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.booking-info {
+    background-color: #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid green;
+    margin-bottom: 20px;
+}
+
+.booking-info p {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.booking-info p:last-child {
+    margin-bottom: 0;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444444;
+    margin-bottom: 8px;
+}
+
+/* Estilo para el desplegable <select> */
+.input-group select {
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.input-group select:focus {
+    border-color: green;
+}
+
+/* Botones */
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+}
+
+.btn-checkout:hover {
+    background-color: #006400;
+}
+
+.btn-cancel {
+    text-align: center;
+    color: #777777;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación para pantallas pequeñas (Móviles) */
+@media (max-width: 600px) {
+    .checkout-card {
+        flex-direction: column; /* Apila la imagen arriba y el contenido abajo en móviles */
+    }
+    
+    .checkout-image {
+        height: 200px;
+    }
+}
