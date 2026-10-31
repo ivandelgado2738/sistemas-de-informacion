@@ -50,7 +50,7 @@ CREATE TABLE club (
 CREATE TABLE pista (
     id_club     BIGINT,
     numero      INT,
-    nombre      VARCHAR(50) NOT NULL,
+    cubierta    BOOLEAN,
     PRIMARY KEY(id_club,numero),
     FOREIGN KEY(id_club) REFERENCES club(id_club)
 );
@@ -119,6 +119,8 @@ CREATE TABLE favorito (
 CREATE TABLE juega (
     id_usuario  BIGINT NOT NULL,
     id_partido  BIGINT NOT NULL,
+    ha_pagado   BOOLEAN,
+    lleva_bolas BOOLEAN,
     PRIMARY KEY (id_usuario, id_partido),
     FOREIGN KEY(id_usuario) REFERENCES usuario(id),
     FOREIGN KEY(id_partido) REFERENCES partido(id_partido)

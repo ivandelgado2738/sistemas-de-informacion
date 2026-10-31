@@ -8,10 +8,12 @@ import java.io.Serializable;
  */
 public final class Club implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     private final Long idClub;
     private final String nombre;
     private final String direccion;
-    private final String telefono;      // puede ser null
+    private final String telefono;      // NOT NULL en la BD
 
     public Club(Long idClub, String nombre, String direccion, String telefono) {
         this.idClub = idClub;
