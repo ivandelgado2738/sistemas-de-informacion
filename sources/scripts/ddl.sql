@@ -81,7 +81,16 @@ CREATE TABLE partido (
     id_partido  BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     resultado   VARCHAR(255),
     id_reserva  BIGINT NOT NULL,
+    privado     BOOLEAN,
     FOREIGN KEY(id_reserva) REFERENCES reserva(id_reserva)
+);
+
+CREATE TABLE invitacion (
+    id_usuario  BIGINT,
+    id_partido  BIGINT,
+    PRIMARY KEY(id_usuario,id_partido),
+    FOREIGN KEY(id_usuario) REFERENCES usuario(id),
+    FOREIGN KEY(id_partido) REFERENCES partido(id_partido)
 );
 
 CREATE TABLE mensaje (

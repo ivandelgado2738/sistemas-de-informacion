@@ -13,14 +13,17 @@ public final class Partido implements Serializable {
     private final Long idPartido;
     private final String resultado;   // puede ser null (partido sin jugar)
     private final long idReserva;
+    private final boolean privado;
 
-    public Partido(Long idPartido, String resultado, long idReserva) {
+    public Partido(Long idPartido, String resultado, long idReserva,boolean privado) {
         this.idPartido = idPartido;
         this.resultado = resultado;
         this.idReserva = idReserva;
+        this.privado=privado; 
     }
 
     public Long getIdPartido() { return idPartido; }
     public String getResultado() { return resultado; }
     public long getIdReserva() { return idReserva; }
+    public boolean getPrivado() { return privado;}
 }

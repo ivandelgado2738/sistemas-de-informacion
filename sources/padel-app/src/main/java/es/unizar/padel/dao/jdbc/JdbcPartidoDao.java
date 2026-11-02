@@ -15,7 +15,7 @@ import java.util.Optional;
 /** Implementación de PartidoDao con JDBC. */
 public final class JdbcPartidoDao implements PartidoDao {
 
-    private static final String COLUMNAS = "id_partido, resultado, id_reserva";
+    private static final String COLUMNAS = "id_partido, resultado, id_reserva, privado";
 
     private final DataSource dataSource;
 
@@ -25,11 +25,12 @@ public final class JdbcPartidoDao implements PartidoDao {
 
     @Override
     public Partido create(Partido p) {
-        final String sql = "INSERT INTO partido (resultado, id_reserva) VALUES (?, ?) RETURNING " + COLUMNAS;
+        final String sql = "INSERT INTO partido (resultado, id_reserva, privado) VALUES (?, ?) RETURNING " + COLUMNAS;
         try (Connection c = dataSource.getConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, p.getResultado());
             ps.setLong(2, p.getIdReserva());
+            ps.setBoolean(3, p.getPrivado());
             try (ResultSet rs = ps.executeQuery()) {
                 if (!rs.next()) {
                     throw new DaoException("El INSERT no devolvió el partido creado", null);
@@ -73,12 +74,13 @@ public final class JdbcPartidoDao implements PartidoDao {
 
     @Override
     public boolean update(Partido p) {
-        final String sql = "UPDATE partido SET resultado = ?, id_reserva = ? WHERE id_partido = ?";
+        final String sql = "UPDATE partido SET resultado = ?, id_reserva = ?, privado = ? WHERE id_partido = ?";
         try (Connection c = dataSource.getConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1, p.getResultado());
             ps.setLong(2, p.getIdReserva());
             ps.setLong(3, p.getIdPartido());
+            ps.setBoolean(4, p.getPrivado());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             throw new DaoException("No se pudo actualizar el partido con id " + p.getIdPartido(), e);
@@ -98,6 +100,6 @@ public final class JdbcPartidoDao implements PartidoDao {
     }
 
     private Partido mapear(ResultSet rs) throws SQLException {
-        return new Partido(rs.getLong("id_partido"), rs.getString("resultado"), rs.getLong("id_reserva"));
+        return new Partido(rs.getLong("id_partido"), rs.getString("resultado"), rs.getLong("id_reserva"), rs.getBoolean("privado"));
     }
 }
