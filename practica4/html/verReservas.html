@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Reservas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos-admin.css">
+</head>
+<body>
+
+    <div class="panel-admin">
+        <a class="btn-volver" href="principalAdmin.html" style="margin-bottom:16px;">← Panel de administrador</a>
+        <h1>Reservas de pistas</h1>
+
+        <p>Listado de pistas con sus reservas</p>
+
+        <p>
+            <a class="btn-admin" href="ofrecerReserva.html">Ofrecer Reserva</a>
+        </p>
+
+        <table class="tabla-admin">
+            <tr>
+                <th>Pista</th>
+                <th>Fecha</th>
+                <th>Horario</th>
+                <th>Jugadores</th>
+                <th>Estado</th>
+                <th>Pagos</th>
+                <th>Cancelar</th>
+            </tr>
+
+            <tr>
+                <td>Pista 1</td>
+                <td>15/10/2026</td>
+                <td>18:00 - 19:30</td>
+                <td>2 / 4</td>
+                <td><span class="estado estado-pagado">Reservada</span></td>
+                <td><a class="btn-admin" href="marcarPagos.html">Ver Pagos</a></td>
+                <td><a class="btn-admin btn-admin-secundario" href="cancelar_error.html">Cancelar</a></td>
+            </tr>
+
+            <tr>
+                <td>Pista 2</td>
+                <td>16/10/2026</td>
+                <td>09:00 - 10:30</td>
+                <td>0 / 2</td>
+                <td><span class="estado estado-inactivo">Sin reservar</span></td>
+                <td><a class="btn-admin" href="marcarPagos.html">Ver Pagos</a></td>
+                <td><a class="btn-admin btn-admin-secundario" href="cancelar_exito.html">Cancelar</a></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

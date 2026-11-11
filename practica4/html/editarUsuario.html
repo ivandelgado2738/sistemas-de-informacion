@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="estilos-login.css">
+    <link rel="stylesheet" href="estilos-admin.css">
+</head>
+<body>
+
+    <div class="contenedor-login">
+        <h2>Editar Usuario</h2>
+
+        <form>
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="Marcos Lopez" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="marlon@unizar.es" required>
+            </div>
+
+            <div class="input-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="activo" selected>Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-login">Guardar Cambios</button>
+            <p style="text-align:center; margin-top: 14px;">
+                <a href="gestionUsuarios.html">Cancelar</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

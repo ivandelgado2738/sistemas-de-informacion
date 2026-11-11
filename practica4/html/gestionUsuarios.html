@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos-admin.css">
+</head>
+<body>
+
+    <div class="panel-admin">
+        <h1>Gestión de Usuarios</h1>
+
+        <p>Listado de Usuarios</p>
+
+        <table class="tabla-admin">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Estado</th>
+                <th>Editar</th>
+            </tr>
+
+            <tr>
+                <td>Marcos Lopez</td>
+                <td>marlon@unizar.es</td>
+                <td><span class="estado estado-activo">Activo</span></td>
+                <td><a class="btn-admin" href="editarUsuario.html">Editar</a></td>
+            </tr>
+
+            <tr>
+                <td>Alberto Martin</td>
+                <td>Alber@gmail.com</td>
+                <td><span class="estado estado-inactivo">Inactivo</span></td>
+                <td><a class="btn-admin" href="editarUsuario.html">Editar</a></td>
+            </tr>
+
+            <tr>
+                <td>Ana Campos</td>
+                <td>anacampos@gmail.com</td>
+                <td><span class="estado estado-activo">Activo</span></td>
+                <td><a class="btn-admin" href="editarUsuario.html">Editar</a></td>
+            </tr>
+        </table>
+
+        <a class="btn-volver" href="principalAdmin.html">← Panel de administrador</a>
+    </div>
+
+</body>
+</html>

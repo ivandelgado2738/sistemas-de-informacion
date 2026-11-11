@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofrecer Reserva</title>
+    <link rel="stylesheet" href="estilos-login.css">
+    <link rel="stylesheet" href="estilos-admin.css">
+</head>
+<body>
+
+    <div class="contenedor-login">
+        <p style="text-align:center;"><a href="principalAdmin.html">← Panel de administrador</a></p>
+        <h2>Ofrecer reserva de pistas</h2>
+        <p style="text-align:center; margin-top: -10px; margin-bottom: 20px; color: #666666;">
+            Datos sobre la pista
+        </p>
+
+        <form>
+            <div class="input-group">
+                <label for="pista">Pista:</label>
+                <select id="pista" name="pista" required>
+                    <option value="">-- seleccione una pista --</option>
+                    <option value="pista1">Pista 1</option>
+                    <option value="pista2">Pista 2</option>
+                    <option value="pista3">Pista 3</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="input-group">
+                <label for="horaInicio">Hora Inicio:</label>
+                <input type="time" id="horaInicio" name="horaInicio" required>
+            </div>
+
+            <div class="input-group">
+                <label for="horaFin">Hora Fin:</label>
+                <input type="time" id="horaFin" name="horaFin" required>
+            </div>
+
+            <button type="submit" class="btn-login">Publicar Reserva</button>
+            <p style="text-align:center; margin-top: 14px;">
+                <a href="verReservas.html">Cancelar</a>
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>

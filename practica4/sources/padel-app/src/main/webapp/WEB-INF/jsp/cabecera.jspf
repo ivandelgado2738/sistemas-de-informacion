@@ -1,0 +1,28 @@
+<%-- Cabecera común de las pantallas de cliente. Se incluye con <%@ include file="cabecera.jspf" %>.
+     Si hay sesión iniciada muestra el nombre y "Cerrar sesi&oacute;n"; si no, "Iniciar sesión" y "Registrarse". --%>
+<header class="header">
+    <div class="top">
+        <a href="${empty sessionScope.usuario ? 'Main.html' : 'principalRegistrado.html'}" class="logo">Reserva tu pista</a>
+        <div class="user-auth">
+            <c:choose>
+                <c:when test="${not empty sessionScope.usuario}">
+                    <span class="user-name">Hola, <c:out value="${sessionScope.usuario.nombre}"/></span>
+                    <a href="perfil" class="auth-btn">Mi perfil</a>
+                    <a href="logout" class="auth-btn btn-primary">Cerrar sesi&oacute;n</a>
+                </c:when>
+                <c:otherwise>
+                    <a href="login" class="auth-btn">Iniciar Sesi&oacute;n</a>
+                    <a href="registro" class="auth-btn btn-primary">Registrarse</a>
+                </c:otherwise>
+            </c:choose>
+        </div>
+    </div>
+    <nav class="nav">
+        <ul class="navlist">
+            <li><a href="favoritos">clubes favoritos</a></li>
+            <li><a href="amigos.html">amigos</a></li>
+            <li><a href="clubes">clubes</a></li>
+            <li><a href="partidos">partidos</a></li>
+        </ul>
+    </nav>
+</header>
